@@ -1,0 +1,169 @@
+@base        <http://www.students.ccsu.edu/~kv1002/>.
+@prefix cap: <http://www.students.ccsu.edu/~kv1002/univ.owl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf/syntax/ns#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<#ccsu>
+	cap:name "Central Connecticut State University";
+	a cap:University.
+
+<#businesstechnology>
+	cap:name "Business and Technology Department";
+	a cap:Department;
+	cap:affiliated <#ccsu>.
+
+<#BBG214>
+	cap:name "e-Business";
+	cap:offeredBy <#ccsu-businesstechnology>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-0133507164>;
+	a cap:Course.
+
+<http://www.students.ccsu.edu/~kv1002/#978-0133507164>
+	a cap:Textbook.
+	
+<#BBG237>
+	cap:offeredBy <#ccsu-businesstechnology>;
+	a cap:Course.
+	
+<#CSC208>
+	cap:offeredBy <#ccsu-businesstechnology>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-1285860268>;
+	a cap:Course;
+        cap:hasPrerequisite <#CSC210>.
+	
+<http://www.students.ccsu.edu/~kv1002/#978-1285860268>
+	a cap:Textbook.
+	
+<#CSC210>
+	cap:offeredBy <#ccsu-businesstechnology>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-0131103627>;
+	a cap:Course;
+        cap:isPrerequisite <#CSC208>.
+
+<http://www.students.ccsu.edu/~kv1002/#978-0131103627>
+	a cap:Textbook.
+	
+<#CSC213>
+	cap:offeredBy <#ccsu-businesstechnology>;
+	cap:requiredText <#978-0321563842>;
+	a cap:Course.
+	
+<#CSC214>
+	cap:offeredBy <#ccsu-businesstechnology>;
+	a cap:Course.
+
+<#CSC215>
+	cap:offeredBy <#tunxis-businesstechnology>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-0321563842>;
+	a cap:Course.
+	
+<http://www.students.ccsu.edu/~kv1002/#978-0321563842>
+	a cap:Textbook.
+	
+<#CSC221>
+	cap:offeredBy <#tunxis-businesstechnology>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#860-1300201986>;
+	a cap:Course.
+	
+
+<http://www.students.ccsu.edu/~kv1002/#860-1300201986>
+	a cap:Textbook.
+
+<#CSC231>
+	cap:offeredBy <#ccsu-businesstechnology>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-1285196145>;
+	a cap:Course.
+
+<http://www.students.ccsu.edu/~kv1002/#978-1285196145>
+	a cap:Textbook.
+	
+<#business>
+	cap:affiliated <#ccsu>;
+	a cap:Department.
+		
+<#mathscience>
+	cap:affiliated <#ccsu>;
+	a cap:Department.
+
+<#MAT172>
+	cap:offeredBy <#ccsu-mathscience>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-0321671790>;
+	a cap:Course.
+	
+<http://www.students.ccsu.edu/~kv1002/#978-0321671790>
+	a cap:Textbook.
+	
+<#MAT254>
+	cap:offeredBy <#ccsu-mathscience>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-0538497817>;
+	a cap:Course.
+
+<#MAT256>
+	cap:offeredBy <#ccsu-mathscience>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-0538497817>;
+	a cap:Course.
+	
+<#MAT268>
+	cap:offeredBy <#ccsu-mathscience>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-0538497817>;
+	a cap:Course.
+	
+<http://www.students.ccsu.edu/~kv1002/#978-0538497817>
+	a cap:Textbook.
+	
+<#MAT285>
+	cap:offeredBy <#ccsu-mathscience>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-0470458242>;
+	a cap:Course.
+		
+<http://www.students.ccsu.edu/~kv1002/#978-0470458242>
+	a cap:Textbook.
+	
+<#PHY121>
+	cap:offeredBy <#ccsu-mathscience>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-321611116>;
+	a cap:Course.
+
+<#PHY122>
+	cap:offeredBy <#ccsu-mathscience>;
+	cap:requiredText <http://www.students.ccsu.edu/~kv1002/#978-321611116>;
+	a cap:Course.
+	
+<http://www.students.ccsu.edu/~kv1002/#978-321611116>
+	a cap:Textbook.
+	
+<#student1>
+	cap:studentAt <#ccsu>;
+	foaf:mbox_sha1sum "c63a655ab30d5e79b3428c3bc376ffcc4b03f29d";
+	a cap:Student.
+
+<#student2>
+	cap:studentAt <#ccsu>;
+	a cap:Student.
+
+<#student3>
+	cap:studentAt <#ccsu>;
+	a cap:Student.
+
+<#student4>
+	cap:studentAt <#ccsu>;
+	a cap:Student.
+
+<#professor1> 
+       cap:professorAt <#ccsu>;
+       a  cap:Professor;
+       cap:teaches <#PHY122>.
+
+<#professor2> 
+       cap:professorAt <#ccsu>;
+       a  cap:Professor;
+       cap:teaches <#MAT172>.
+
+<#professor3> 
+       cap:professorAt <#ccsu>;
+       a  cap:Professor;
+       cap:teaches <#CSC208>.
+
+
+
